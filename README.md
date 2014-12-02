@@ -13,9 +13,11 @@ create a [spectrogram](http://en.wikipedia.org/wiki/Spectrogram) of the audio. B
 ![spectrogram](plot/Spec.png)
 
 Instead of FFT aproach, I think the amplitudes in time domain is sufficient enough to distinguish the audio files.As the following wave graph shows, the average amplitude of each time window is different. So for a audio file, we can get a list of average amplitudes and compare these to one of other audio files just like compare two line plot.
-    ** Audio Waves
+
+     Audio Waves
 ![wave](plot/audioWav.png)
-    ** Averaged Audio amplitudes\n
+
+     Averaged Audio amplitudes\n
 ![avePlot](plot/aveAmp.png)
 
 
