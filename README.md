@@ -9,18 +9,14 @@ Examples include:
 * ['S.V.Rice'](http://www.comparisonics.com/AES_ID31.pdf)
 
 [shazam](http://www.ee.columbia.edu/~dpwe/papers/Wang03-shazam.pdf) Describe a algorithm which use an FFT over small windows of time in the audio's samples to
-create a [spectrogram](http://en.wikipedia.org/wiki/Spectrogram) of the audio. Below is a spectrogram example refered from [WILLDREVO](http://willdrevo.com/fingerprinting-and-audio-recognition-with-python/)
-
+create a [spectrogram](http://en.wikipedia.org/wiki/Spectrogram) of the audio. Below is a spectrogram example refered from [WILLDREVO](http://willdrevo.com/fingerprinting-and-audio-recognition-with-python/) But the FFT and peaks fingerprints have a higher time complexity, you need calculate the FFT for each time windows and count spectrograms peaks in  the frequency domain.
 ![spectrogram](plot/Spec.png)
 
-Audio recognition algorithm implemented in Java, see the explanation here:  
+Instead of FFT aproach, I think the amplitudes in time domain is sufficient enough to distinguish the audio files.As the following wave graph shows, the average amplitude of each time window is different. So for a audio file, we can get a list of average amplitudes and compare these to one of other audio files just like compare two line plot.
+![wave](plot/audioWav.png)
+![avePlot](plot/aveAmp.png)
 
-It can tell whtere two audio files contain one or more segments sounds alike
-## Dependencies:
 
-I've only tested this on Unix systems.
-
-* ['Java1.6']
 
 ##Compile:
 Use Makefile, under project directory type: 
