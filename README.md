@@ -24,11 +24,17 @@ Instead of FFT aproach, I think the amplitudes in time domain is sufficient enou
 
 ##Compile:
 Use Makefile, under project directory type: 
+
 $ make
+
 $ chmod +x ./dam
+
 $ ./dam -f <pathname> -f <pathname>
+
 $ ./dam -d <pathname> -d <pathname>
+
 $ ./dam -f <pathname> -d <pathname>
+
 $ ./dam -d <pathname> -f <pathname>
 
 
