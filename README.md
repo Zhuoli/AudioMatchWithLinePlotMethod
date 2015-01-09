@@ -25,11 +25,13 @@ Instead of FFT aproach, I think the amplitudes in time domain is sufficient enou
 ##Compile:
 Use Makefile, under project directory type: 
 
+Currently support compare audio files with wav format and mp3 format.
+
 $ make
 
 $ chmod +x ./dam
 
-$ ./dam -f <pathname> -f <pathname>
+$ ./dam -f /<pathname> -f /<pathname>
 
 $ ./dam -d <pathname> -d <pathname>
 
