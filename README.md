@@ -31,13 +31,13 @@ $ make
 
 $ chmod +x ./dam
 
-$ ./dam -f /<pathname> -f /<pathname>
+$ ./dam -f pathname -f pathname
 
-$ ./dam -d <pathname> -d <pathname>
+$ ./dam -d pathname -d pathname
 
-$ ./dam -f <pathname> -d <pathname>
+$ ./dam -f pathname -d pathname
 
-$ ./dam -d <pathname> -f <pathname>
+$ ./dam -d pathname -f pathname
 
 
 
