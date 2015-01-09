@@ -1,4 +1,4 @@
-package assignment8AveAmplitude;
+package audio;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -51,7 +51,7 @@ public class Comparator {
 		//that we need to check that file against all the files in container1
 
 		int valueSamplesPerSecond = (int) (1/(1-AverageAmplitude.overlapRatio));
-		int valuesPerZone=(Assignment8.SongSampleSize*valueSamplesPerSecond);
+		int valuesPerZone=(Client.SongSampleSize*valueSamplesPerSecond);
 		for(Audio audio1 : container1){
 			for(Audio audio2 : container2){
 				if(isMatch(audio1,audio2,valueSamplesPerSecond,valuesPerZone)){
@@ -68,7 +68,7 @@ public class Comparator {
 			for(int array2Start=0;array2Start<hashvalue2.length-valuesPerZone;array2Start++){
 				if(isMathStartHereCompareAngle(1,0,audio1,array1Start,audio2,array2Start,valuesPerZone)){
 					System.out.println("MATCH "+audio1.filename+" "+audio2.filename+" "+(array1Start+0.0)/valueSamplesPerSecond+" "+(array2Start+0.0)/valueSamplesPerSecond);
-					if(Assignment8.DEBUG){
+					if(Client.DEBUG){
 						String s1=audio1.getFileName()+" "+((array1Start+0.0)/valueSamplesPerSecond)+"s";
 						String s2=audio2.getFileName()+" "+((array2Start+0.0)/valueSamplesPerSecond)+"s";
 						Audio.drawWaveFile(Arrays.copyOfRange(hashvalue1, array1Start, hashvalue1.length),s1,Arrays.copyOfRange(hashvalue2, array2Start, hashvalue2.length),s2);

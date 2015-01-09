@@ -1,4 +1,4 @@
-package assignment8AveAmplitude;
+package audio;
 
 public final class WaveConstants {
 	static public int LENCHUNKDESCRIPTOR = 4;

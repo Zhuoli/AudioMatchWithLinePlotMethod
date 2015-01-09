@@ -1,4 +1,4 @@
-package assignment8AveAmplitude;
+package audio;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -57,7 +57,7 @@ public  class Audio {
 			bis = new BufferedInputStream(fis);
 			audio = new Audio(bis,fileCanonicalPath,fileName);
 		} catch (Exception e) {
-			if(Assignment8.DEBUG){
+			if(Client.DEBUG){
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -293,8 +293,6 @@ public  class Audio {
 			}
 			Plot.hold_off();
 	}
-	// int ?????? ????????? double??????
-	// JavaPlot ?????????double???????????????
 	public static double[] Integers2Doubles(int[] raw) {
 		double[] res = new double[raw.length];
 		for (int i = 0; i < res.length; i++) {

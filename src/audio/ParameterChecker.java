@@ -1,4 +1,4 @@
-package assignment8AveAmplitude;
+package audio;
 
 
 class ParameterChecker{

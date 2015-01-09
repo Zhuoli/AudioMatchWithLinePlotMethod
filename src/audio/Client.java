@@ -1,11 +1,11 @@
-package assignment8AveAmplitude;
+package audio;
 
 import java.io.File;
 /* 
  *  THIS IS JUST A TEST VERSION COMPARING ON TIME DOMAIN!!!
  */
 
-public class Assignment8 {
+public class Client {
 	// bin size
 	public static boolean DEBUG=false;
 	public static int SongSampleSize = 5;

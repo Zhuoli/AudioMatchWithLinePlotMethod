@@ -1,4 +1,4 @@
-package assignment8AveAmplitude;
+package audio;
 
 import java.io.File;
 import java.io.IOException;
@@ -36,7 +36,7 @@ public class Convert2StandardFormat {
 				return null;
 			}
 		}else{
-			if(Assignment8.DEBUG){
+			if(Client.DEBUG){
 				System.err.println("ERROR: file not ends with audio format");
 			}
 			formatFile=null;

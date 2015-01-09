@@ -1,4 +1,4 @@
-package assignment8AveAmplitude;
+package audio;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -37,13 +37,13 @@ public class AudioHeader {
 		//Check format = wave
 		if (byteBuffer.get(8) != 87 || byteBuffer.get(9) != 65 ||
 			bytes[10] != 86 || bytes[11] != 69) {
-			if (Assignment8.DEBUG) { System.err.print("ERROR: NOT Wave Format"+"  "); }
+			if (Client.DEBUG) { System.err.print("ERROR: NOT Wave Format"+"  "); }
 			return null;		
 		}
 		format="wav";
 		//Check audio format = PCM
 		if (byteBuffer.get(20) != 1 || byteBuffer.get(21) != 0) {
-			if (Assignment8.DEBUG) { System.err.print("ERROR: NOT PCM"+"  "); }
+			if (Client.DEBUG) { System.err.print("ERROR: NOT PCM"+"  "); }
 			return null;
 		}
 		//Check channels = stereo or Mono
@@ -52,7 +52,7 @@ public class AudioHeader {
 		}else if(byteBuffer.get(22)==1 && byteBuffer.get(23)==0){
 			nc=1;
 		}else{
-			if(Assignment8.DEBUG){System.err.print(
+			if(Client.DEBUG){System.err.print(
 					"ERROR: Incorrect num of channels"+"  ");}
 			return null;
 		}
@@ -60,7 +60,7 @@ public class AudioHeader {
 		sampleRate=byteBuffer.getInt(24);
 		if(sampleRate!=11025 && sampleRate!=22050 
 				&& sampleRate!=44100 && sampleRate!=48000){
-			if(Assignment8.DEBUG){
+			if(Client.DEBUG){
 				System.err.print(
 						"ERROR: Incorrect sample rate "+sampleRate+"  ");}
 			return null;
@@ -68,7 +68,7 @@ public class AudioHeader {
 		//check BitsPerSample is 16
 		bps=byteBuffer.getShort(34);
 		if (bps != 16 && bps != 8) {
-			if (Assignment8.DEBUG) {
+			if (Client.DEBUG) {
 				System.out.print(
 						"ERROR: Incorrect bites per sample "+ bps+"  ");}
 				return null;

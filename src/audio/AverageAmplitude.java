@@ -1,4 +1,4 @@
-package assignment8AveAmplitude;
+package audio;
 
 // average amplitudes class, line plot data array
 public class AverageAmplitude {
