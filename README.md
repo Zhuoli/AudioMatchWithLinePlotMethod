@@ -31,15 +31,12 @@ $ make
 
 $ chmod +x ./dam
 
-$ ./dam -f pathname -f pathname
+$ ./dam -f audiofilePath -f audioFilePath
 
-$ ./dam -d pathname -d pathname
+$ ./dam -d directoryPath -d directoryPath
 
-$ ./dam -f pathname -d pathname
+$ ./dam -f audioFilePath -d directoryPath
 
-$ ./dam -d pathname -f pathname
-
-
-
+$ ./dam -d directoryPath -f audioFilePath
 
 
