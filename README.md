@@ -39,5 +39,5 @@ $ ./dam -d <pathname> -f <pathname>
 
 
 
-## How does it work?
+
 
